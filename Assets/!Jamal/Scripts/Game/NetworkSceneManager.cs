@@ -55,6 +55,11 @@ public class NetworkSceneManager : NetworkSceneManagerBase
 
         runner.SetActiveScene(scene_Menu);
         Destroy(runner);
+
+        if (RaceSceneManager.instance.networkPlayer_Winner == NetworkPlayer.Local && RaceSceneManager.instance.networkPlayer_Winner != null)
+        {
+            LoadMenu();
+        }
     }
 
     protected override IEnumerator SwitchScene(SceneRef prevScene, SceneRef newScene, FinishedLoadingDelegate finished)

@@ -127,6 +127,7 @@ public class Spawner : SimulationBehaviour, INetworkRunnerCallbacks
         //}
         NetworkPlayer.networkPlayers.Clear();
         if(RaceSceneManager.instance.networkPlayer_Winner == NetworkPlayer.Local && RaceSceneManager.instance.networkPlayer_Winner != null) return;
+
         NetworkSceneManager.Instance.LoadMenu();                //Temporary placed
 
         if (shutdownReason == ShutdownReason.HostMigration) return;

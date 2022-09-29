@@ -276,7 +276,7 @@ public class RaceSceneManager : MonoBehaviour
             Debug.Log($"{dragons[0].nickName} am winner");
             if (dragons[0].nickName == NetworkPlayer.Local.nickName)
             {
-                dragons[0].RewardUser(500);
+                dragons[0].RewardUser(Reward);
                 networkPlayer_Winner = dragons[0];
                 resultUIList[0].WinnerMedal.SetActive(true);
                 panel_ConvertTokens.gameObject.SetActive(true);
